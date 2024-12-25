@@ -1,0 +1,5 @@
+const starterPokemon = pokemon.find(pokemon => pokemon.starter === true);
+
+game.party.push(starterPokemon);
+
+console.log(game.party);

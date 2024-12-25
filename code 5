@@ -1,0 +1,9 @@
+const pokemonToAdd = [
+  pokemon.find(pokemon => pokemon.type === "Water"),
+  pokemon.find(pokemon => pokemon.HP > 50),
+  pokemon.find(pokemon => pokemon.type === "Fire")
+];
+
+pokemonToAdd.forEach(pokemon => game.party.push(pokemon));
+
+console.log(game.party);
