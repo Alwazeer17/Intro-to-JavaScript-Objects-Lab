@@ -1,0 +1,23 @@
+/*
+Exercise 15
+1. Now, complete gyms with a difficulty below 8. Reflect on how this is similar to or different from the previous gym exercises.
+(change the value of `complete` in the qualifying objects from false to true).
+
+Solve Exercise 15 here:
+*/
+
+const gyms = [
+  { name: 'Gym 1', difficulty: 5, complete: false },
+  { name: 'Gym 2', difficulty: 7, complete: false },
+  { name: 'Gym 3', difficulty: 8, complete: false },
+  { name: 'Gym 4', difficulty: 6, complete: false },
+  { name: 'Gym 5', difficulty: 9, complete: false },
+];
+
+gyms.forEach(gym => {
+  if (gym.difficulty < 8) {
+    gym.complete = true;
+  }
+});
+
+console.log(gyms);
