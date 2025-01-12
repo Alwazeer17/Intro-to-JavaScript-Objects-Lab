@@ -1,0 +1,26 @@
+/*
+Exercise 9
+1. Can you print out all the starter Pokémon from the `pokemon` array?
+2. Think about how you can identify a starter Pokémon and then log their names.
+
+
+Solve Exercise 9 here:
+*/
+
+
+const pokemon = [
+    { name: "Bulbasaur", type: "grass", starter: true },
+    { name: "Charmander", type: "fire", starter: true },
+    { name: "Squirtle", type: "water", starter: true },
+    { name: "Pidgey", type: "normal", starter: false },
+    { name: "Rattata", type: "normal", starter: false },
+    { name: "Ekans", type: "poison", starter: false }
+  ];
+  
+
+  pokemon.forEach(pokemon => {
+    if (pokemon.starter) {
+      console.log(pokemon.name);
+    }
+  });
+  
