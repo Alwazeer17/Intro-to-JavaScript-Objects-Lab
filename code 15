@@ -6,18 +6,25 @@ Exercise 15
 Solve Exercise 15 here:
 */
 
-const gyms = [
-  { name: 'Gym 1', difficulty: 5, complete: false },
-  { name: 'Gym 2', difficulty: 7, complete: false },
-  { name: 'Gym 3', difficulty: 8, complete: false },
-  { name: 'Gym 4', difficulty: 6, complete: false },
-  { name: 'Gym 5', difficulty: 9, complete: false },
-];
+const game = {
+  party: [
+    { name: "Pikachu", type: "Electric" },
+    { name: "Bulbasaur", type: "Grass/Poison" },
+    { name: "Charmander", type: "Fire" },
+    { name: "Squirtle", type: "Water" }
+  ],
 
-gyms.forEach(gym => {
-  if (gym.difficulty < 8) {
-    gym.complete = true;
+  partyCount: function() {
+    return this.party.length;
   }
-});
+};
 
-console.log(gyms);
+console.log(game.partyCount());
+/*
+Exercise 16
+1. Log the entire game object to the console. Take a moment to review the changes you've made throughout the exercises.
+
+
+Solve Exercise 16 here:
+*/
+console.log(game);
