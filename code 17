@@ -1,0 +1,9 @@
+
+game.party = [
+    { name: 'Pikachu', hp: 35 },
+    { name: 'Bulbasaur', hp: 45 },
+    { name: 'Charizard', hp: 75 },
+    { name: 'Squirtle', hp: 40 }
+  ];
+  game.party.sort((a, b) => b.hp - a.hp);
+console.log(game.party);

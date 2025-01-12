@@ -1,0 +1,46 @@
+/*
+Exercise 20
+Copy the `catchPokemon` method that you just wrote above, and paste it below. Modify is so that you can just pass in the name of a Pokemon instead of an entire object, and the method will look up the Pokemon from the data set for you.
+
+The string passed in should be allowed to be any case (for example, if the string 'PiKacHU' is passed to the function, it should match to 'Pikachu' in the data set). 
+
+If there is not a match, then return a string noting that the selected Pokemon does not exist. Ensure you do not decrement the pokeball count if an invalid Pokemon name is passed in, and also ensure that the Pokemon isn't added to the `game.party` or the `game.collection`.
+
+Solve Exercise 20 here:
+*/
+
+
+function catchPokemon(pokemonName) {
+  const pokemon = pokemonData.find(p => p.name.toLowerCase() === pokemonName.toLowerCase());
+
+  if (!pokemon) {
+    console.log('The selected Pokémon does not exist.');
+    return;
+  }
+
+  if (game.items[0].quantity > 0) {
+    game.items[0].quantity--;
+
+    if (game.party.length < 6) {
+      game.party.push(pokemon);
+    } else {
+      game.collection.push(pokemon);
+    }
+  } else {
+    console.log('Not enough Pokeballs to catch ' + pokemon.name + '!');
+  }
+}
+
+const pokemonData = [
+  { name: 'Pikachu', hp: 35 },
+  { name: 'Bulbasaur', hp: 45 },
+  { name: 'Charmander', hp: 39 }
+];
+
+catchPokemon('Pikachu');
+catchPokemon('PiKacHU');
+catchPokemon('Charizard');
+
+console.log(game.items);
+console.log(game.party);
+console.log(game.collection);
